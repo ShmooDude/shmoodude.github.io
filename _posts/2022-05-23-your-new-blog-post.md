@@ -1,0 +1,3 @@
+## This is my first blog post
+
+Being a data scientist is about analyzing large amounts of data in order to make accurate predictions using machine learning.  The major duties include data cleansing, preparation and analysis.  There is a lot of overlap between data scientist and statistician, however, they often come at the problem in a different way.  A statistician would find the simplest model that doesn't violate any of the assumptions while a data scientist would try to find the best model for the most accurate predictions.  Right now, I'm more in the statistician category, not having done much analysis outside of classrooms but I'm interested in learning techniques that can be applied to big data.
