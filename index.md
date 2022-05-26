@@ -1,4 +1,4 @@
-I am currently in my final semester as a Master's Student at NCSU in the statistics program.  This blog will contain informatione as I learn about concepts and techniques for data science.
+I am currently in my final semester as a Master's Student at NCSU in the statistics program.  This blog will contain information as I learn about concepts and techniques for data science.
 
 ---
 
