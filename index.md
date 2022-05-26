@@ -7,6 +7,4 @@ My e-mail address is:
 
 Here's a picture of me: 
 
-<img src=images/MRGPortrait.jpg width="100">
-
-[comment]: <> (Not using markdown for above because I can't resize with just markdown)
+![](images/MRGPortrait.jpg)
