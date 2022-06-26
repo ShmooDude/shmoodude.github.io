@@ -7,4 +7,4 @@ For this project, I created a vignette for the financial API at [polygon.io](htt
 
 I didn't necessarily find any of the logic difficult so much as finding what I want to do difficult.  I started from a point of designing the functions without thinking about the end result of what I wanted to do with them (the exploratory data analysis).  If I were to do a similar project in the future, I would try to make sure I have a more solid knowledge of what data I wanted to get before starting to design the functions.
 
-The link to the Vignette is [here](https://shmoodude.github.io/Financial-API-Vignette/) or at the top of the page
+The link to the Vignette is [here](https://shmoodude.github.io/Financial-API-Vignette/)
