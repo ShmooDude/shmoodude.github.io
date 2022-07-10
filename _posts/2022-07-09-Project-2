@@ -1,0 +1,13 @@
+[Project 2](https://jovannicatalan.github.io/ST558-Project2/)
+================
+Mark Gordon
+2022-06-25
+
+For this project, we created an analysis using the [Online News Popularity Data Set](https://archive.ics.uci.edu/ml/datasets/Online+News+Popularity).  It uses a subset of the variables there to attempt to predict the number of shares a given article will get.  These are broken up into six separate reports, one for each data channel.  Reports are generated automatically from a single Rmarkdown document.
+
+As far as what I would do differently, I would probably try to see if I could get a result with a lower RMSE which ended up in the 16k or so range.  Given the way the data looked I'm not sure that this is even possible as there weren't exactly large, obvious trends or high correlations between the predictors and the response variable.  
+The most difficult part for me was trying to figure out the correct way to transform the binary variables I had into a single categorical variable.  The method that I ultimately ended up using seems like a roundabout way to do it, requiring pivot_longer, filter and select to get the desired format.  It feels like there should be a simpler way or a single function that could do all this automatically and perhaps I just don't know about it.  
+
+My big take away from the project was the ability to generate multiple reports from a single markdown document.  knowing how to automate that process is a big plus and one I'm sure I'll use in the future.
+
+[GitHub pages version](https://jovannicatalan.github.io/ST558-Project2/) and [GitHub Repo](https://github.com/jovannicatalan/ST558-Project2)
