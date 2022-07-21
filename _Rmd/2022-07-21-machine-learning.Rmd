@@ -1,0 +1,50 @@
+---
+title: "Machine Learning"
+author: "Mark Gordon"
+date: '2022-07-21'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.path = "../images/", warning = FALSE, message = FALSE)
+```
+
+## K Nearest Neighbors
+
+I found K nearest neighbors (kNN) the most interesting.  The idea is to use the closest k neighbors in order to predict the probability of the response, with the highest probability being the chosen value.  By splitting the initial data into training and test data sets, we can then get a misclassification rate to pick the optimal "k" value.
+
+## Multi-class classification
+
+```{r}
+# Load libraries
+library(tidyverse)
+library(caret)
+
+# Read in iris data
+
+# Split the data set
+irisIndex <- createDataPartition(iris$Species, p = 0.8, list = FALSE)
+irisTrain <- iris[irisIndex,]
+irisTest <- iris[-irisIndex,]
+
+# Training options
+nfold <- 10 # number of cv folds
+nrep <- 3 # number of times to repeat cv
+pProcess = c("center", "scale") # preprocessing
+
+# Train kNN model
+knnFit <- train(Species ~ ., data = irisTrain,
+                method = "knn",
+                preProcess = pProcess,
+                trControl = trainControl(method = "repeatedcv", 
+                                         number = nfold, repeats = nrep),
+                tuneGrid = data.frame(k = 1:20))
+
+# Best Tune value
+knnFit$bestTune
+
+# Check model performance
+confusionMatrix(data = irisTest$Species, 
+                reference = predict(knnFit, newdata = irisTest))
+```
+
+<!-- rmarkdown::render("_Rmd/2022-07-21-machine-learning.Rmd", output_format = "github_document", output_dir = "_posts", output_options = list(html_preview = "false")) -->
